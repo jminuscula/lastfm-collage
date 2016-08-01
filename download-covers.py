@@ -55,7 +55,7 @@ def find_and_download_cover(query, outdir, req_semaphore, download_semaphore):
     for idx, album in enumerate(data['results']):
         try:
             album_query = "{} {}".format(album['artistName'], album['name'])
-        except KeyError:
+        except (KeyError, TypeError):
             continue
         query_score = difflib.SequenceMatcher(None, query, album_query).ratio()
         album_query_scores.append((query_score, album))
