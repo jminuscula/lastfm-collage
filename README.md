@@ -1,7 +1,11 @@
 # lastfm-collage
-Create a collage with cover art from your last.fm scrobblings
+Download covers for your top albums in Last.fm
 
-Requires [ImageMagick's](http://www.imagemagick.org/) montage
+Covers downloaded from [iTunes](https://www.apple.com/itunes).
+
+## Requirements
+  * Python 3.5
+  * [ImageMagick's](http://www.imagemagick.org/) montage
 
 ## Usage
 
@@ -12,3 +16,7 @@ $ ./download-covers.py topalbums.txt -o covers
 
 $ montage covers/* -geometry 640x640 -tile 10x14 poster.png
 ```
+
+## Sample
+
+![Sample Output](sample.png)

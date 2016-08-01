@@ -1,3 +1,4 @@
+#!/usr/bin/env python3.5
 
 import sys
 import os.path
@@ -67,7 +68,7 @@ class Album:
         return cleaned_title.strip()
 
     def __eq__(self, other):
-        return (self.artist, self.title) == (other.artist, other.title)
+        return hash(self) == hash(other)
 
     def __hash__(self):
         return hash((self.artist, self.title))
