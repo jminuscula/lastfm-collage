@@ -1,0 +1,2 @@
+pillow=3.3.0
+aiohttp=0.22.4
